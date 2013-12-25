@@ -1,0 +1,4 @@
+openmp
+======
+
+test openmp features
