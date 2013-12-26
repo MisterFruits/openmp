@@ -1,0 +1,11 @@
+set term pngcairo
+set ylabel 'taille du vecteur'
+set xlabel 'time'
+
+set output 'bench.png'
+plot	'res' using 1:2 with line title 'Sequential', \
+		'res' using 1:3 with line title 'Parallel (2proc)'
+
+set output
+set term xterm
+
