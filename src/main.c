@@ -3,7 +3,7 @@
 
 void initRand(){
 	srand(time(NULL));
-}	
+}
 
 int main(int argc, char const ** argv){
 	int i;
@@ -11,9 +11,9 @@ int main(int argc, char const ** argv){
 	double v1[TAB_MAX],v2[TAB_MAX],v3[TAB_MAX];
 	initRand();
 
-	fillRandom(v1,TAB_MAX);	
-	fillRandom(v2,TAB_MAX);	
-	
+	fillRandom(v1,TAB_MAX);
+	fillRandom(v2,TAB_MAX);
+
 /*	for(i=0;i<4;i++){
 		v1[i] = i;
 		v2[i] = 3-i;
@@ -21,16 +21,16 @@ int main(int argc, char const ** argv){
 
 	printf("#n\tseqTime\tparaTime\n");
 	for(i=0 ; i<10000 ; i++){
-		fillRandom(v1,TAB_MAX);	
-		fillRandom(v2,TAB_MAX);	
-	
+		fillRandom(v1,TAB_MAX);
+		fillRandom(v2,TAB_MAX);
+
 		seqTime = get_time();
 		add(v1,v2,v3,TAB_MAX);
 		seqTime = get_time() - seqTime;
 
-		fillRandom(v1,TAB_MAX);	
-		fillRandom(v2,TAB_MAX);	
-	
+		fillRandom(v1,TAB_MAX);
+		fillRandom(v2,TAB_MAX);
+
 		paraTime = get_time();
 		addPara(v1,v2,v3,TAB_MAX);
 		paraTime = get_time()-paraTime;
@@ -38,9 +38,9 @@ int main(int argc, char const ** argv){
 	}
 	*/
 	sscanf(argv[1],"%d",&i);
-	testPi(i);
+	testPI(i);
 	return EXIT_SUCCESS;
-}	
+}
 
 
 void testPI(int nbIt){
@@ -67,4 +67,4 @@ void testPI(int nbIt){
 	}
 	seqTime = get_time()-seqTime;
 	printf("%lf\t%lf\n",seqTime,paraTime);
-}	
+}
