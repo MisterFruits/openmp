@@ -1,27 +1,26 @@
-CC = gcc-mp-4.8 
-OPT = -g -Wall -fopenmp 
+CC = gcc-mp-4.8
+OPT = -g -Wall -fopenmp
 BINDIR = ./bin
 SRCDIR = ./src
+OBJDIR = ./build
 BIN = $(BINDIR)/main
 
 all:$(BIN)
 
 #OBJETS
 $(OBJDIR)/main.o : $(SRCDIR)/main.c
-	$(CC) $(OPT) $< -c
+	$(CC) $(OPT) $< -c -o $@
 
 $(OBJDIR)/timer.o : $(SRCDIR)/timer.c
-	$(CC) $(OPT) $< -c
+	$(CC) $(OPT) $< -c -o $@
 
 $(OBJDIR)/vector.o : $(SRCDIR)/vector.c
-	$(CC) $(OPT) $< -c
-
-
+	$(CC) $(OPT) $< -c -o $@
 
 #MAINS
-$(BINDIR)/main : $(OBJDIR)/main.o $(OBJDIR)/timer.o $(OBJDIR)/vector.o 
+$(BINDIR)/main : $(OBJDIR)/main.o $(OBJDIR)/timer.o $(OBJDIR)/vector.o
 	$(CC) -o $@ $^ $(OPT)
 
 clean:
-	rm -r $(OBJDIR)/* $(BINDIR)/* 
+	rm -r $(OBJDIR)/* $(BINDIR)/*
 
