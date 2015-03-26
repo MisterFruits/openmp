@@ -12,7 +12,7 @@ void initRand(){
 }
 
 int main(int argc, char const ** argv){
-	int i;
+	long i;
 	double paraTime,seqTime;
 	double v1[TAB_MAX],v2[TAB_MAX],v3[TAB_MAX];
 	initRand();
@@ -43,7 +43,7 @@ int main(int argc, char const ** argv){
 		printf("%d\t%lf\t%lf\n",i,seqTime,paraTime);
 	}
 	*/
-	sscanf(argv[1],"%d",&i);
+	sscanf(argv[1],"%ld",&i);
 	testPI(i);
 	return EXIT_SUCCESS;
 }
