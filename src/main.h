@@ -1,5 +1,5 @@
 #ifndef _MAIN_C_
-#define _MAIN_C
+#define _MAIN_C_
 
 #define TAB_MAX 100000
 
