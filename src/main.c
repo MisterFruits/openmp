@@ -1,4 +1,10 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
 #include "main.h"
+#include "vector.h"
+#include "timer.h"
 
 
 void initRand(){
