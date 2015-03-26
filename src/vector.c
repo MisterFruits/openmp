@@ -1,6 +1,6 @@
-#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "vector.h"
 
 #define MAX 100000
@@ -19,7 +19,7 @@ void addPara(double const * v1 , double const * v2, double * res, int n){
 	for(i=0 ; i<n ; i++){
 		res[i] = v1[i] + v2[i];
 	}
-}	
+}
 
 double scalar(double const * v1, double const * v2, int n){
 	int i;

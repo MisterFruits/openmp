@@ -1,10 +1,6 @@
 #ifndef _VECTOR_H_
 #define _VECTOR_H_
 
-#include <time.h>
-#include <stdio.h>
-#include <stdlib.h>
-
 #define MAX 100000
 
 void add(double const * , double const *, double *, int);
